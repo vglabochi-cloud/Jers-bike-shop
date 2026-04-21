@@ -23,7 +23,17 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="shop.html" class="active">Shop</a></li>
+      <li class="nav-dropdown">
+          <a href="shop.html" class="active">Shop</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header"><a href="shop.html">All Bikes</a></li>
+            <li><a href="shop.html?filter=mountain">Mountain Bikes</a></li>
+            <li><a href="shop.html?filter=road">Road Bikes</a></li>
+            <li><a href="shop.html?filter=city">City / Commuter</a></li>
+            <li><a href="shop.html?filter=electric">Electric / E-Bikes</a></li>
+            <li><a href="shop.html?filter=kids">Kids Bikes</a></li>
+          </ul>
+        </li>
       <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()">

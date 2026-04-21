@@ -214,6 +214,12 @@ async function loadAllProducts() {
   const data = await fetchJSON('/data/products.json');
   if (!data) return;
   grid.innerHTML = data.items.map(renderProductCard).join('');
+  const param = new URLSearchParams(window.location.search).get('filter');
+  if (param) {
+    const btn = [...document.querySelectorAll('.filter-btn')]
+      .find(b => b.getAttribute('onclick')?.includes(`'${param}'`));
+    if (btn) filterProducts(param, btn);
+  }
 }
 
 async function loadServicesTuneups() {
