@@ -89,15 +89,16 @@ nav {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
   box-shadow: 0 8px 28px rgba(0,0,0,0.1);
-  min-width: 190px;
-  padding: 6px 0;
+  min-width: 210px;
+  padding: 8px 0;
+  padding-top: 14px;
   z-index: 200;
   list-style: none;
 }
@@ -120,6 +121,7 @@ nav {
   margin-bottom: 2px;
 }
 .dropdown-menu li.dropdown-header a:hover { background: none; color: var(--accent); }
+.dropdown-divider { height: 1px; background: var(--gray-200); margin: 6px 0; }
 
 .hamburger {
   display: none;

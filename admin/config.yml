@@ -30,6 +30,11 @@ collections:
                   - { label: "City / Commuter", value: "city" }
                   - { label: "Electric", value: "electric" }
                   - { label: "Kids", value: "kids" }
+                  - { label: "Helmet", value: "helmet" }
+                  - { label: "Accessory", value: "accessory" }
+                  - { label: "Apparel", value: "apparel" }
+                  - { label: "Parts", value: "parts" }
+                  - { label: "Tires & Tubes", value: "tires" }
               - name: "badge"
                 label: "Badge"
                 widget: "select"

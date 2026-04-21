@@ -26,12 +26,18 @@
       <li class="nav-dropdown">
           <a href="shop.html" class="active">Shop</a>
           <ul class="dropdown-menu">
-            <li class="dropdown-header"><a href="shop.html">All Bikes</a></li>
+            <li class="dropdown-header"><a href="shop.html">All Products</a></li>
             <li><a href="shop.html?filter=mountain">Mountain Bikes</a></li>
             <li><a href="shop.html?filter=road">Road Bikes</a></li>
             <li><a href="shop.html?filter=city">City / Commuter</a></li>
             <li><a href="shop.html?filter=electric">Electric / E-Bikes</a></li>
             <li><a href="shop.html?filter=kids">Kids Bikes</a></li>
+            <li class="dropdown-divider"></li>
+            <li><a href="shop.html?filter=helmet">Helmets</a></li>
+            <li><a href="shop.html?filter=accessory">Accessories</a></li>
+            <li><a href="shop.html?filter=apparel">Apparel</a></li>
+            <li><a href="shop.html?filter=parts">Parts</a></li>
+            <li><a href="shop.html?filter=tires">Tires &amp; Tubes</a></li>
           </ul>
         </li>
       <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -81,6 +87,11 @@
       <button class="filter-btn" onclick="filterProducts('city', this)">City</button>
       <button class="filter-btn" onclick="filterProducts('electric', this)">Electric</button>
       <button class="filter-btn" onclick="filterProducts('kids', this)">Kids</button>
+      <button class="filter-btn" onclick="filterProducts('helmet', this)">Helmets</button>
+      <button class="filter-btn" onclick="filterProducts('accessory', this)">Accessories</button>
+      <button class="filter-btn" onclick="filterProducts('apparel', this)">Apparel</button>
+      <button class="filter-btn" onclick="filterProducts('parts', this)">Parts</button>
+      <button class="filter-btn" onclick="filterProducts('tires', this)">Tires &amp; Tubes</button>
       <div class="shop-sort">
         <select onchange="sortProducts(this.value)">
           <option value="default">Sort: Featured</option>
