@@ -43,7 +43,8 @@ collections:
                   - { label: "Sold Out", value: "sold-out" }
               - { name: "price", label: "Price (₱)", widget: "number", value_type: "int" }
               - { name: "originalPrice", label: "Original Price (₱) — leave blank if no discount", widget: "number", value_type: "int", required: false }
-              - { name: "icon", label: "Icon (paste any emoji)", widget: "string", default: "🚲" }
+              - { name: "image", label: "Product Photo", widget: "image", required: false, hint: "Upload a photo. If left blank, the emoji icon will show instead." }
+              - { name: "icon", label: "Emoji Icon (fallback if no photo)", widget: "string", default: "🚲" }
               - { name: "featured", label: "Show on Homepage", widget: "boolean", default: false }
               - name: "ctaText"
                 label: "Button Text"

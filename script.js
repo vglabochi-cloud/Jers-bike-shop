@@ -105,9 +105,13 @@ function renderProductCard(p) {
   const tags = [p.category, p.badge].filter(Boolean).join(' ');
   const safeName = (p.name || '').replace(/'/g, "\\'");
 
+  const imgContent = p.image
+    ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />`
+    : (p.icon || '🚲');
+
   return `
     <div class="product-card" data-category="${tags}" data-price="${p.price}">
-      <div class="product-img">${p.icon || '🚲'}${badgeHtml}</div>
+      <div class="product-img" style="position:relative;">${imgContent}${badgeHtml}</div>
       <div class="product-info">
         <div class="product-category">${categoryLabel(p.category)}</div>
         <div class="product-name">${p.name}</div>
