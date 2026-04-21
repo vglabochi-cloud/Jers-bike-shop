@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "icon": "🛞",
+      "name": "Flat Repair",
+      "description": "Tube replacement or patch on the spot. Most bikes done in under 30 minutes.",
+      "price": "₱18",
+      "unit": "+ tube/patch"
+    },
+    {
+      "icon": "⛓️",
+      "name": "Chain Replacement",
+      "description": "We'll check your chain wear and replace if needed. Includes derailleur check and indexing.",
+      "price": "₱25",
+      "unit": "+ chain"
+    },
+    {
+      "icon": "🎯",
+      "name": "Brake Bleed (Hydraulic)",
+      "description": "Full hydraulic brake bleed for consistent stopping power. Available for most brake brands.",
+      "price": "₱45",
+      "unit": "/ brake"
+    },
+    {
+      "icon": "🔄",
+      "name": "Wheel Truing",
+      "description": "Wobble or hop? We'll true your wheel back to straight. Stand-alone or part of a service.",
+      "price": "₱22",
+      "unit": "/ wheel"
+    },
+    {
+      "icon": "🖇️",
+      "name": "Cable & Housing",
+      "description": "Full cable replacement for brake or shifter systems. Restores crisp, responsive feel.",
+      "price": "₱30",
+      "unit": "+ parts"
+    },
+    {
+      "icon": "💥",
+      "name": "Crash Damage Assessment",
+      "description": "Thorough inspection after a crash. We'll document damage and recommend repairs or replacement.",
+      "price": "₱35",
+      "unit": "/ assessment"
+    }
+  ]
+}

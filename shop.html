@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Jer's Bike Shop</title>
+  <meta name="description" content="Shop bikes at Jer's Bike Shop — mountain, road, city, electric, and presale deals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<div class="announcement-bar">
+  🔥 Spring Presale — Up to 10% off select bikes. Limited units. Reserve today.
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Our Inventory</div>
+    <h1>Shop Bikes & Gear</h1>
+    <p>Presale, in-stock, and on-sale bikes. Reserve yours before they're gone.</p>
+  </div>
+</div>
+
+<!-- Presale Banner -->
+<section style="background: var(--accent); padding: 20px 24px;">
+  <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+    <div style="color: white;">
+      <strong style="font-size: 1rem;">🔥 Spring Presale is Live</strong>
+      <span style="margin-left: 12px; font-size: 0.875rem; opacity: 0.9;">Reserve now — pay when bikes arrive. No commitment until confirmed.</span>
+    </div>
+    <a href="contact.html" class="btn btn-outline-white" style="white-space: nowrap; font-size: 0.85rem; padding: 10px 20px;">Questions? Contact Us</a>
+  </div>
+</section>
+
+<!-- Shop -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filters -->
+    <div class="shop-controls">
+      <button class="filter-btn active" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProducts('presale', this)">Presale</button>
+      <button class="filter-btn" onclick="filterProducts('mountain', this)">Mountain</button>
+      <button class="filter-btn" onclick="filterProducts('road', this)">Road</button>
+      <button class="filter-btn" onclick="filterProducts('city', this)">City</button>
+      <button class="filter-btn" onclick="filterProducts('electric', this)">Electric</button>
+      <button class="filter-btn" onclick="filterProducts('kids', this)">Kids</button>
+      <div class="shop-sort">
+        <select onchange="sortProducts(this.value)">
+          <option value="default">Sort: Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products-grid" id="productsGrid">
+
+      <div class="product-card" data-category="mountain presale" data-price="1199">
+        <div class="product-img">🚵
+          <div class="product-badges"><span class="badge badge-presale">Presale</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Mountain</div>
+          <div class="product-name">Trail Blazer 29 — Hardtail MTB</div>
+          <div class="product-price">
+            <span class="price-current">$1,199</span>
+            <span class="price-original">$1,499</span>
+            <span class="price-save">Save $300</span>
+          </div>
+          <button class="btn btn-primary" onclick="addToInquiry('Trail Blazer 29')">Reserve Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="road" data-price="2499">
+        <div class="product-img">🚴
+          <div class="product-badges"><span class="badge badge-new">New</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Road</div>
+          <div class="product-name">Aero Elite 700c — Carbon Road Bike</div>
+          <div class="product-price">
+            <span class="price-current">$2,499</span>
+          </div>
+          <button class="btn btn-dark" onclick="addToInquiry('Aero Elite 700c')">Inquire</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="city" data-price="649">
+        <div class="product-img">🚲
+          <div class="product-badges"><span class="badge badge-sale">Sale</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">City / Commuter</div>
+          <div class="product-name">City Cruiser 7-Speed — Step-Through</div>
+          <div class="product-price">
+            <span class="price-current">$649</span>
+            <span class="price-original">$849</span>
+            <span class="price-save">Save $200</span>
+          </div>
+          <button class="btn btn-primary" onclick="addToInquiry('City Cruiser 7-Speed')">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="electric presale" data-price="2199">
+        <div class="product-img">⚡
+          <div class="product-badges"><span class="badge badge-presale">Presale</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Electric</div>
+          <div class="product-name">Volt Urban E-Bike — 500W Motor</div>
+          <div class="product-price">
+            <span class="price-current">$2,199</span>
+            <span class="price-original">$2,699</span>
+            <span class="price-save">Save $500</span>
+          </div>
+          <button class="btn btn-primary" onclick="addToInquiry('Volt Urban E-Bike')">Reserve Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="mountain" data-price="899">
+        <div class="product-img">🏔️
+          <div class="product-badges"><span class="badge badge-sale">Sale</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Mountain</div>
+          <div class="product-name">Gravel King 650b — Adventure Bike</div>
+          <div class="product-price">
+            <span class="price-current">$899</span>
+            <span class="price-original">$1,099</span>
+            <span class="price-save">Save $200</span>
+          </div>
+          <button class="btn btn-primary" onclick="addToInquiry('Gravel King 650b')">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="road presale" data-price="1599">
+        <div class="product-img">🏅
+          <div class="product-badges"><span class="badge badge-presale">Presale</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Road</div>
+          <div class="product-name">Endurance Pro — Alloy Endurance Road</div>
+          <div class="product-price">
+            <span class="price-current">$1,599</span>
+            <span class="price-original">$1,899</span>
+            <span class="price-save">Save $300</span>
+          </div>
+          <button class="btn btn-primary" onclick="addToInquiry('Endurance Pro')">Reserve Now</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="kids" data-price="299">
+        <div class="product-img">🎠
+          <div class="product-badges"><span class="badge badge-new">New</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Kids</div>
+          <div class="product-name">Little Ripper 20" — Ages 6–9</div>
+          <div class="product-price">
+            <span class="price-current">$299</span>
+          </div>
+          <button class="btn btn-dark" onclick="addToInquiry('Little Ripper 20\"')">Inquire</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="electric" data-price="3499">
+        <div class="product-img">🔋
+          <div class="product-badges"><span class="badge badge-new">New</span></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Electric</div>
+          <div class="product-name">Cargo Runner E-Bike — Long-Tail</div>
+          <div class="product-price">
+            <span class="price-current">$3,499</span>
+          </div>
+          <button class="btn btn-dark" onclick="addToInquiry('Cargo Runner E-Bike')">Inquire</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Inquiry Note -->
+    <div style="background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px 28px; margin-top: 48px; display: flex; align-items: flex-start; gap: 16px;">
+      <div style="font-size: 1.5rem; flex-shrink: 0;">💬</div>
+      <div>
+        <div style="font-weight: 700; margin-bottom: 6px;">Don't see what you're looking for?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">We carry many more bikes in-store and can special order almost any brand or model. <a href="contact.html" style="color: var(--accent); font-weight: 600;">Contact us</a> and we'll find it for you.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Presale Info -->
+<section class="section-sm" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">How Presale Works</div>
+      <h2 class="section-title">Reserve Now, Ride Soon</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 28px; max-width: 900px; margin: 0 auto;">
+      <div style="text-align: center; padding: 24px 20px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">📋</div>
+        <div style="font-weight: 700; margin-bottom: 8px;">1. Reserve</div>
+        <div style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.6;">Click "Reserve Now" or contact us. No payment yet — just hold your spot.</div>
+      </div>
+      <div style="text-align: center; padding: 24px 20px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">📦</div>
+        <div style="font-weight: 700; margin-bottom: 8px;">2. We Confirm</div>
+        <div style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.6;">We'll send you a confirmation with arrival ETA and payment details within 24 hours.</div>
+      </div>
+      <div style="text-align: center; padding: 24px 20px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">🚲</div>
+        <div style="font-weight: 700; margin-bottom: 8px;">3. Pick Up or Ship</div>
+        <div style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.6;">When your bike arrives, we assemble it free. Pick up in-store or arrange local delivery.</div>
+      </div>
+      <div style="text-align: center; padding: 24px 20px;">
+        <div style="font-size: 2rem; margin-bottom: 12px;">🎉</div>
+        <div style="font-weight: 700; margin-bottom: 8px;">4. Ride!</div>
+        <div style="font-size: 0.85rem; color: var(--gray-600); line-height: 1.6;">Your bike comes fully assembled, tuned, and ready to ride. Free 30-day check-in included.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inquiry Modal -->
+<div id="inquiryModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center; padding:20px;">
+  <div style="background:white; border-radius:16px; padding:36px; max-width:480px; width:100%; position:relative;">
+    <button onclick="closeModal()" style="position:absolute; top:16px; right:16px; background:none; border:none; font-size:1.3rem; cursor:pointer; color:var(--gray-600);">✕</button>
+    <div class="section-label">Reserve / Inquire</div>
+    <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 6px;" id="modalBikeName"></h3>
+    <p style="font-size: 0.875rem; color: var(--gray-600); margin-bottom: 24px;">Fill in your details and we'll follow up within a few hours.</p>
+    <form onsubmit="submitInquiry(event)">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith" required />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="jane@example.com" required />
+      </div>
+      <div class="form-group">
+        <label>Phone (optional)</label>
+        <input type="tel" placeholder="(555) 000-0000" />
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Any questions or preferences? (size, color, etc.)" style="min-height: 80px;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Inquiry</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+        <p>Your local bike shop for quality rides, expert service, and a community that loves cycling as much as you do.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">👥</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Bikes</a></li>
+          <li><a href="shop.html">Presale</a></li>
+          <li><a href="shop.html">Mountain Bikes</a></li>
+          <li><a href="shop.html">Road Bikes</a></li>
+          <li><a href="shop.html">E-Bikes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Tune-Ups</a></li>
+          <li><a href="services.html">Repairs</a></li>
+          <li><a href="services.html">Custom Builds</a></li>
+          <li><a href="services.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Hours & Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jer's Bike Shop. All rights reserved.</span>
+      <span>Built with ❤️ for riders</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><span class="toast-icon">✅</span><span id="toast-msg"></span></div>
+<script src="script.js"></script>
+</body>
+</html>

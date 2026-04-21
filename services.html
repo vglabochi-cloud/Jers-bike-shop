@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Jer's Bike Shop</title>
+  <meta name="description" content="Expert bike service at Jer's Bike Shop — tune-ups, repairs, custom builds, bike fitting, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<div class="announcement-bar">
+  🔥 Spring Presale — Up to 10% off select bikes. Limited units. <a href="shop.html">Shop Now →</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Expert Service</div>
+    <h1>Bike Services & Pricing</h1>
+    <p>Certified mechanics. Fast turnaround. Honest pricing. Walk-ins welcome.</p>
+  </div>
+</div>
+
+<!-- Tune-Ups -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Tune-Ups</div>
+      <h2 class="section-title">Keep Your Ride Dialed In</h2>
+      <p class="section-sub">Regular maintenance extends the life of your bike and keeps every ride safe and smooth.</p>
+    </div>
+    <div class="services-grid" id="tuneups-grid">
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <div class="service-name">Basic Tune-Up</div>
+        <div class="service-desc">Brake lever adjustment, cable tension, derailleur indexing, tire pressure, and safety inspection. Perfect for seasonal refresh.</div>
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 0.78rem; color: var(--gray-400); margin-bottom: 6px;">INCLUDES</div>
+          <div style="font-size: 0.82rem; color: var(--gray-600); line-height: 1.8;">✓ Brake adjustment &nbsp;✓ Gear indexing<br>✓ Tire inflation &nbsp;✓ Safety check</div>
+        </div>
+        <div class="service-price">₱49 <span>/ bike</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <div class="service-name">Standard Tune-Up</div>
+        <div class="service-desc">Everything in Basic plus drivetrain cleaning, wheel truing, and bearing check. Recommended annually.</div>
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 0.78rem; color: var(--gray-400); margin-bottom: 6px;">INCLUDES</div>
+          <div style="font-size: 0.82rem; color: var(--gray-600); line-height: 1.8;">✓ All Basic items &nbsp;✓ Drivetrain clean<br>✓ Wheel truing &nbsp;✓ Bearing check</div>
+        </div>
+        <div class="service-price">₱20 <span>/ bike</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <div class="service-name">Full Overhaul</div>
+        <div class="service-desc">Complete disassembly, clean every component, regrease all bearings, replace worn cables and housing. Like new.</div>
+        <div style="margin-bottom: 12px;">
+          <div style="font-size: 0.78rem; color: var(--gray-400); margin-bottom: 6px;">INCLUDES</div>
+          <div style="font-size: 0.82rem; color: var(--gray-600); line-height: 1.8;">✓ Full disassembly &nbsp;✓ All bearings regreased<br>✓ New cables & housing &nbsp;✓ Reassembly & test ride</div>
+        </div>
+        <div class="service-price">₱149 <span>+ parts</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Repairs -->
+<section class="section" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Repairs</div>
+      <h2 class="section-title">Walk-In Repairs Welcome</h2>
+      <p class="section-sub">No appointment needed for most repairs. We'll get you back on the road fast.</p>
+    </div>
+    <div class="services-grid" id="repairs-grid">
+      <div class="service-card">
+        <div class="service-icon">🛞</div>
+        <div class="service-name">Flat Repair</div>
+        <div class="service-desc">Tube replacement or patch on the spot. Most bikes done in under 30 minutes.</div>
+        <div class="service-price">₱18 <span>+ tube/patch</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⛓️</div>
+        <div class="service-name">Chain Replacement</div>
+        <div class="service-desc">We'll check your chain wear and replace if needed. Includes derailleur check and indexing.</div>
+        <div class="service-price">₱25 <span>+ chain</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <div class="service-name">Brake Bleed (Hydraulic)</div>
+        <div class="service-desc">Full hydraulic brake bleed for consistent stopping power. Available for most brake brands.</div>
+        <div class="service-price">₱45 <span>/ brake</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔄</div>
+        <div class="service-name">Wheel Truing</div>
+        <div class="service-desc">Wobble or hop? We'll true your wheel back to straight. Stand-alone or part of a service.</div>
+        <div class="service-price">₱22 <span>/ wheel</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🖇️</div>
+        <div class="service-name">Cable & Housing</div>
+        <div class="service-desc">Full cable replacement for brake or shifter systems. Restores crisp, responsive feel.</div>
+        <div class="service-price">₱30 <span>+ parts</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💥</div>
+        <div class="service-name">Crash Damage Assessment</div>
+        <div class="service-desc">Thorough inspection after a crash. We'll document damage and recommend repairs or replacement.</div>
+        <div class="service-price">₱35 <span>/ assessment</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Custom & Specialty -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Specialty Services</div>
+      <h2 class="section-title">Custom Builds & Fitting</h2>
+      <p class="section-sub">For the rider who wants more than off-the-shelf — we'll build or fit your bike exactly to you.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px;">
+
+      <div class="service-card" style="padding: 36px;">
+        <div class="service-icon" style="font-size: 2.4rem;">🏗️</div>
+        <div class="service-name" style="font-size: 1.15rem; margin-bottom: 10px;">Custom Bike Build</div>
+        <div class="service-desc" style="margin-bottom: 20px;">Start with a frame or bring your parts list — we'll spec it out and build it right. Consultation included.</div>
+        <ul style="font-size: 0.85rem; color: var(--gray-600); line-height: 2; margin-bottom: 24px;">
+          <li>✓ Free initial consultation</li>
+          <li>✓ Parts sourcing assistance</li>
+          <li>✓ Full build & test ride</li>
+          <li>✓ Post-build 30-day check-in</li>
+        </ul>
+        <div class="service-price" style="font-size: 1.2rem;">Labor from ₱250 <span>+ parts</span></div>
+        <a href="contact.html" class="btn btn-dark" style="margin-top: 20px;">Book a Consult</a>
+      </div>
+
+      <div class="service-card" style="padding: 36px;">
+        <div class="service-icon" style="font-size: 2.4rem;">📐</div>
+        <div class="service-name" style="font-size: 1.15rem; margin-bottom: 10px;">Professional Bike Fitting</div>
+        <div class="service-desc" style="margin-bottom: 20px;">Reduce pain, improve efficiency. Our fitting uses body measurements and ride analysis to dial in your position.</div>
+        <ul style="font-size: 0.85rem; color: var(--gray-600); line-height: 2; margin-bottom: 24px;">
+          <li>✓ Full body measurement</li>
+          <li>✓ Saddle height & reach adjustment</li>
+          <li>✓ Cleat alignment (if applicable)</li>
+          <li>✓ Written fitting report</li>
+        </ul>
+        <div class="service-price" style="font-size: 1.2rem;">₱120 <span>/ session</span></div>
+        <a href="contact.html" class="btn btn-dark" style="margin-top: 20px;">Schedule Fitting</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Book CTA -->
+<section class="section" style="background: var(--black); color: var(--white); text-align: center;">
+  <div class="container" style="max-width: 600px;">
+    <div class="section-label" style="color: var(--accent);">Book a Service</div>
+    <h2 class="section-title" style="color: var(--white);">Ready to Get Your Bike Sorted?</h2>
+    <p style="color: var(--gray-400); margin-bottom: 36px; font-size: 1.05rem; line-height: 1.7;">Drop in during shop hours or book ahead. We'll give you an honest estimate before any work begins.</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <a href="contact.html" class="btn btn-primary">Book a Service</a>
+      <a href="contact.html" class="btn btn-outline-white">Call the Shop</a>
+    </div>
+    <p style="color: var(--gray-600); margin-top: 20px; font-size: 0.85rem;">Walk-ins welcome Mon–Sat · Most jobs 24–48hr turnaround</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+        <p>Your local bike shop for quality rides, expert service, and a community that loves cycling as much as you do.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">👥</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Bikes</a></li>
+          <li><a href="shop.html">Presale</a></li>
+          <li><a href="shop.html">Mountain Bikes</a></li>
+          <li><a href="shop.html">Road Bikes</a></li>
+          <li><a href="shop.html">E-Bikes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Tune-Ups</a></li>
+          <li><a href="services.html">Repairs</a></li>
+          <li><a href="services.html">Custom Builds</a></li>
+          <li><a href="services.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Hours & Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jer's Bike Shop. All rights reserved.</span>
+      <span>Built with ❤️ for riders</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><span class="toast-icon">✅</span><span id="toast-msg"></span></div>
+<script src="script.js"></script>
+</body>
+</html>

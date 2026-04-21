@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "icon": "🔧",
+      "name": "Basic Tune-Up",
+      "description": "Brake lever adjustment, cable tension, derailleur indexing, tire pressure, and safety inspection. Perfect for seasonal refresh.",
+      "includes": ["Brake adjustment", "Gear indexing", "Tire inflation", "Safety check"],
+      "price": "₱49",
+      "unit": "/ bike"
+    },
+    {
+      "icon": "🛠️",
+      "name": "Standard Tune-Up",
+      "description": "Everything in Basic plus drivetrain cleaning, wheel truing, and bearing check. Recommended annually.",
+      "includes": ["All Basic items", "Drivetrain clean", "Wheel truing", "Bearing check"],
+      "price": "₱20",
+      "unit": "/ bike"
+    },
+    {
+      "icon": "⚙️",
+      "name": "Full Overhaul",
+      "description": "Complete disassembly, clean every component, regrease all bearings, replace worn cables and housing. Like new.",
+      "includes": ["Full disassembly", "All bearings regreased", "New cables & housing", "Reassembly & test ride"],
+      "price": "₱149",
+      "unit": "+ parts"
+    }
+  ]
+}

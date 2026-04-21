@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "day": "10",
+      "month": "May",
+      "type": "Group Ride",
+      "name": "Saturday Morning Trail Ride",
+      "time": "7:00 AM — 10:00 AM",
+      "location": "Meets at Jer's Bike Shop",
+      "description": "A casual 15-mile trail ride through the park. All levels welcome. Bring water and a helmet!",
+      "ctaText": "RSVP — Free",
+      "ctaLink": "contact.html",
+      "ctaStyle": "outline"
+    },
+    {
+      "day": "17",
+      "month": "May",
+      "type": "Workshop",
+      "name": "Basic Bike Maintenance 101",
+      "time": "11:00 AM — 1:00 PM",
+      "location": "In-Shop — Limited Seats",
+      "description": "Learn how to fix a flat, adjust your brakes, and lube your chain. Hands-on instruction by our mechanics.",
+      "ctaText": "Reserve a Spot — ₱15",
+      "ctaLink": "contact.html",
+      "ctaStyle": "primary"
+    },
+    {
+      "day": "24",
+      "month": "May",
+      "type": "Sale Event",
+      "name": "Memorial Day Presale Drop",
+      "time": "9:00 AM — 5:00 PM",
+      "location": "In-Store & Online",
+      "description": "Biggest sale of the spring — up to 30% off bikes, gear, and accessories. Newsletter subscribers get early access.",
+      "ctaText": "Get Early Access",
+      "ctaLink": "index.html#newsletter",
+      "ctaStyle": "dark"
+    }
+  ]
+}

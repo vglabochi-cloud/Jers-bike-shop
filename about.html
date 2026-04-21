@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Jer's Bike Shop</title>
+  <meta name="description" content="Learn the story behind Jer's Bike Shop — locally owned, community driven, and passionate about cycling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="announcement-bar">
+  🔥 Spring Presale — Up to 10% off select bikes. Limited units. <a href="shop.html">Shop Now →</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Our Story</div>
+    <h1>About Jer's Bike Shop</h1>
+    <p>Locally owned. Community driven. Passionate about the ride.</p>
+  </div>
+</div>
+
+<!-- Story -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        🚲
+        <div class="about-badge">
+          <div class="about-badge-num">12+</div>
+          <div class="about-badge-label">Years in Business</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">The Story</div>
+        <h2 class="section-title">Started With a Wrench and a Dream</h2>
+        <p class="section-sub">
+          Jer's Bike Shop was founded in 2014 by Jer — a lifelong cyclist who got tired of driving 40 minutes to find a shop that actually knew bikes. He opened a small repair stand in his garage, word spread fast, and the rest is history.
+        </p>
+        <p class="section-sub" style="margin-top: 16px;">
+          Today, Jer's is a full-service shop offering everything from entry-level commuters to custom performance builds — all backed by the same honest, no-pressure service that's kept our customers coming back for over a decade.
+        </p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div>
+              <div class="value-name">No Pressure Sales</div>
+              <div class="value-desc">We help you find the right bike, not the most expensive one.</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🔩</div>
+            <div>
+              <div class="value-name">Expert Mechanics</div>
+              <div class="value-desc">Certified technicians with years of real-world experience.</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌿</div>
+            <div>
+              <div class="value-name">Community First</div>
+              <div class="value-desc">Group rides, workshops, and events all year long.</div>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">⚡</div>
+            <div>
+              <div class="value-name">Fast Turnaround</div>
+              <div class="value-desc">Most service jobs done within 24–48 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Numbers -->
+<section class="section-sm" style="background: var(--gray-50);">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center;">
+      <div>
+        <div class="hero-stat-num" style="font-size: 2.2rem;">500+</div>
+        <div class="hero-stat-label" style="font-size: 0.875rem;">Happy Riders</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" style="font-size: 2.2rem;">12 yrs</div>
+        <div class="hero-stat-label" style="font-size: 0.875rem;">In Business</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" style="font-size: 2.2rem;">3,000+</div>
+        <div class="hero-stat-label" style="font-size: 0.875rem;">Bikes Serviced</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" style="font-size: 2.2rem;">100+</div>
+        <div class="hero-stat-label" style="font-size: 0.875rem;">Events Hosted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Team -->
+<section class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">The Team</div>
+      <h2 class="section-title">People Behind the Wrenches</h2>
+      <p class="section-sub">A small, passionate team dedicated to getting you rolling.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 28px; max-width: 800px; margin: 0 auto;">
+
+      <div style="text-align: center;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 16px;">👨‍🔧</div>
+        <div style="font-weight: 800; font-size: 1.05rem;">Jer</div>
+        <div style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 8px;">Owner & Head Mechanic</div>
+        <div style="font-size: 0.83rem; color: var(--gray-600); line-height: 1.6;">12 years in the shop. MTB racer, e-bike convert, and your go-to guy for anything drivetrain.</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 16px;">👩‍🔧</div>
+        <div style="font-weight: 800; font-size: 1.05rem;">Maya</div>
+        <div style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 8px;">Senior Technician</div>
+        <div style="font-size: 0.83rem; color: var(--gray-600); line-height: 1.6;">Road cyclist and custom build specialist. If it has wheels, Maya can build it better.</div>
+      </div>
+
+      <div style="text-align: center;">
+        <div style="width: 100px; height: 100px; border-radius: 50%; background: var(--gray-100); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin: 0 auto 16px;">🧑‍💼</div>
+        <div style="font-weight: 800; font-size: 1.05rem;">Carlos</div>
+        <div style="font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 8px;">Sales & Events</div>
+        <div style="font-size: 0.83rem; color: var(--gray-600); line-height: 1.6;">Organizes our group rides and workshops. Ask him anything — he rides everything in the shop.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--black); color: var(--white); text-align: center;">
+  <div class="container" style="max-width: 600px;">
+    <div class="section-label" style="color: var(--accent);">Come Say Hi</div>
+    <h2 class="section-title" style="color: var(--white);">Stop By the Shop</h2>
+    <p style="color: var(--gray-400); margin-bottom: 36px; font-size: 1.05rem; line-height: 1.7;">Whether you need a tune-up, want to test ride a bike, or just want to talk bikes — the door's always open.</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+      <a href="contact.html" class="btn btn-primary">Get Directions</a>
+      <a href="shop.html" class="btn btn-outline-white">Browse the Shop</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+        <p>Your local bike shop for quality rides, expert service, and a community that loves cycling as much as you do.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">📷</a>
+          <a href="#" class="social-link" title="Facebook">👥</a>
+          <a href="#" class="social-link" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Bikes</a></li>
+          <li><a href="shop.html">Presale</a></li>
+          <li><a href="shop.html">Mountain Bikes</a></li>
+          <li><a href="shop.html">Road Bikes</a></li>
+          <li><a href="shop.html">E-Bikes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Tune-Ups</a></li>
+          <li><a href="services.html">Repairs</a></li>
+          <li><a href="services.html">Custom Builds</a></li>
+          <li><a href="services.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Hours & Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jer's Bike Shop. All rights reserved.</span>
+      <span>Built with ❤️ for riders</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><span class="toast-icon">✅</span><span id="toast-msg"></span></div>
+<script src="script.js"></script>
+</body>
+</html>

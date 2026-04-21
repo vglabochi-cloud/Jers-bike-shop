@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Jer's Bike Shop</title>
+  <meta name="description" content="Contact Jer's Bike Shop — visit us in store, call, or send a message. We're happy to help." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="announcement-bar">
+  🔥 Spring Presale — Up to 10% off select bikes. Limited units. <a href="shop.html">Shop Now →</a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">Get in Touch</div>
+    <h1>Contact Jer's Bike Shop</h1>
+    <p>Questions, service bookings, presale inquiries, or just want to talk bikes — we're here.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <h2>Visit Us or Reach Out</h2>
+        <p>Stop by the shop during business hours, give us a call, or fill out the form and we'll get back to you within a few hours.</p>
+        <div class="contact-details">
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📍</div>
+            <div>
+              <div class="contact-item-label">Address</div>
+              <div class="contact-item-value">123 Rider Lane, Suite A<br>Your City, ST 00000</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">📞</div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value"><a href="tel:+15550001234">(555) 000-1234</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">✉️</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:hello@jersbikeshop.com">hello@jersbikeshop.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon">🕐</div>
+            <div>
+              <div class="contact-item-label">Hours</div>
+              <div class="hours-grid">
+                <div class="hours-row"><strong>Mon–Fri</strong></div>
+                <div class="hours-row">9:00 AM – 6:00 PM</div>
+                <div class="hours-row"><strong>Saturday</strong></div>
+                <div class="hours-row">9:00 AM – 5:00 PM</div>
+                <div class="hours-row"><strong>Sunday</strong></div>
+                <div class="hours-row">Closed</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder">
+          <div class="map-icon">🗺️</div>
+          <strong>Jer's Bike Shop</strong>
+          <span>123 Rider Lane, Your City</span>
+          <a href="https://maps.google.com" target="_blank" class="btn btn-outline" style="margin-top: 8px; padding: 8px 18px; font-size: 0.82rem;">Open in Google Maps</a>
+        </div>
+
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form">
+        <div class="section-label">Send a Message</div>
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.02em;">How can we help?</h3>
+        <p style="font-size: 0.875rem; color: var(--gray-600); margin-bottom: 28px; line-height: 1.6;">We reply within a few hours Mon–Sat. For urgent matters, give us a call.</p>
+
+        <form onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Topic</label>
+            <select id="subject">
+              <option value="">Select a topic...</option>
+              <option value="presale">Presale Inquiry</option>
+              <option value="service">Book a Service</option>
+              <option value="event">Event / Group Ride</option>
+              <option value="custom">Custom Build</option>
+              <option value="general">General Question</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us what's on your mind..." required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Send Message →</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Strip -->
+<section class="section-sm" style="background: var(--gray-50); border-top: 1px solid var(--gray-200);">
+  <div class="container">
+    <div class="section-header center" style="margin-bottom: 36px;">
+      <div class="section-label">Quick Answers</div>
+      <h2 class="section-title" style="font-size: 1.8rem;">Common Questions</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto;">
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 22px 24px;">
+        <div style="font-weight: 700; margin-bottom: 8px;">Do I need an appointment for service?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Walk-ins are welcome for most repairs. For custom builds and bike fitting, booking ahead is recommended.</div>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 22px 24px;">
+        <div style="font-weight: 700; margin-bottom: 8px;">How does presale work?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Reserve a bike with no upfront payment. We confirm availability and contact you when it arrives — typically 1–2 weeks.</div>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 22px 24px;">
+        <div style="font-weight: 700; margin-bottom: 8px;">Do you offer test rides?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Yes! In-stock bikes are available for test rides in the parking lot. Bring a helmet or borrow one of ours.</div>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 22px 24px;">
+        <div style="font-weight: 700; margin-bottom: 8px;">Can you order specific bikes?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Absolutely. We work with multiple suppliers and can special order most brands. Lead time is usually 2–4 weeks.</div>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 22px 24px;">
+        <div style="font-weight: 700; margin-bottom: 8px;">How long do repairs take?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Most standard repairs are done within 24–48 hours. Flat repairs are often same-day or walk-in. We'll always give you an ETA.</div>
+      </div>
+      <div style="background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 22px 24px;">
+        <div style="font-weight: 700; margin-bottom: 8px;">Are group rides free?</div>
+        <div style="font-size: 0.875rem; color: var(--gray-600); line-height: 1.6;">Our Saturday morning trail rides are always free. Workshops have a small fee ($15–25) to cover instructor time and materials.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+        <p>Your local bike shop for quality rides, expert service, and a community that loves cycling as much as you do.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">👥</a>
+          <a href="#" class="social-link">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Bikes</a></li>
+          <li><a href="shop.html">Presale</a></li>
+          <li><a href="shop.html">Mountain Bikes</a></li>
+          <li><a href="shop.html">Road Bikes</a></li>
+          <li><a href="shop.html">E-Bikes</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Tune-Ups</a></li>
+          <li><a href="services.html">Repairs</a></li>
+          <li><a href="services.html">Custom Builds</a></li>
+          <li><a href="services.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Hours & Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jer's Bike Shop. All rights reserved.</span>
+      <span>Built with ❤️ for riders</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><span class="toast-icon">✅</span><span id="toast-msg"></span></div>
+<script src="script.js"></script>
+</body>
+</html>

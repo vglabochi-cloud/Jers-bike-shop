@@ -1,0 +1,140 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ── PRODUCTS ──────────────────────────────────────────────────────────────
+  - name: "products"
+    label: "🚲 Products"
+    files:
+      - name: "products_list"
+        label: "All Products"
+        file: "data/products.json"
+        fields:
+          - name: "items"
+            label: "Products"
+            label_singular: "Product"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Product Name", widget: "string" }
+              - name: "category"
+                label: "Category"
+                widget: "select"
+                options:
+                  - { label: "Mountain", value: "mountain" }
+                  - { label: "Road", value: "road" }
+                  - { label: "City / Commuter", value: "city" }
+                  - { label: "Electric", value: "electric" }
+                  - { label: "Kids", value: "kids" }
+              - name: "badge"
+                label: "Badge"
+                widget: "select"
+                required: false
+                default: ""
+                options:
+                  - { label: "None", value: "" }
+                  - { label: "Presale", value: "presale" }
+                  - { label: "New Arrival", value: "new" }
+                  - { label: "Sale", value: "sale" }
+                  - { label: "Sold Out", value: "sold-out" }
+              - { name: "price", label: "Price (₱)", widget: "number", value_type: "int" }
+              - { name: "originalPrice", label: "Original Price (₱) — leave blank if no discount", widget: "number", value_type: "int", required: false }
+              - { name: "icon", label: "Icon (paste any emoji)", widget: "string", default: "🚲" }
+              - { name: "featured", label: "Show on Homepage", widget: "boolean", default: false }
+              - name: "ctaText"
+                label: "Button Text"
+                widget: "select"
+                default: "Inquire"
+                options:
+                  - "Reserve Now"
+                  - "Buy Now"
+                  - "Inquire"
+
+  # ── TUNE-UP SERVICES ──────────────────────────────────────────────────────
+  - name: "tuneups"
+    label: "🔧 Tune-Up Services"
+    files:
+      - name: "tuneups_list"
+        label: "Tune-Up Pricing"
+        file: "data/tuneups.json"
+        fields:
+          - name: "items"
+            label: "Tune-Up Services"
+            label_singular: "Service"
+            widget: "list"
+            fields:
+              - { name: "icon", label: "Icon (emoji)", widget: "string", default: "🔧" }
+              - { name: "name", label: "Service Name", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - name: "includes"
+                label: "What's Included"
+                widget: "list"
+                field: { name: "item", label: "Item", widget: "string" }
+              - { name: "price", label: "Price (e.g. ₱49)", widget: "string" }
+              - { name: "unit", label: "Unit (e.g. / bike)", widget: "string" }
+
+  # ── REPAIR SERVICES ───────────────────────────────────────────────────────
+  - name: "repairs"
+    label: "🛠️ Repair Services"
+    files:
+      - name: "repairs_list"
+        label: "Repair Pricing"
+        file: "data/repairs.json"
+        fields:
+          - name: "items"
+            label: "Repair Services"
+            label_singular: "Service"
+            widget: "list"
+            fields:
+              - { name: "icon", label: "Icon (emoji)", widget: "string", default: "🛞" }
+              - { name: "name", label: "Service Name", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "price", label: "Price (e.g. ₱18)", widget: "string" }
+              - { name: "unit", label: "Unit (e.g. + parts)", widget: "string" }
+
+  # ── EVENTS ────────────────────────────────────────────────────────────────
+  - name: "events"
+    label: "📅 Events"
+    files:
+      - name: "events_list"
+        label: "Upcoming Events"
+        file: "data/events.json"
+        fields:
+          - name: "items"
+            label: "Events"
+            label_singular: "Event"
+            widget: "list"
+            fields:
+              - { name: "day", label: "Day (number, e.g. 10)", widget: "string" }
+              - { name: "month", label: "Month (e.g. May)", widget: "string" }
+              - { name: "type", label: "Event Type (e.g. Group Ride)", widget: "string" }
+              - { name: "name", label: "Event Name", widget: "string" }
+              - { name: "time", label: "Time (e.g. 7:00 AM — 10:00 AM)", widget: "string" }
+              - { name: "location", label: "Location", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "ctaText", label: "Button Text (e.g. RSVP — Free)", widget: "string" }
+              - { name: "ctaLink", label: "Button Link (e.g. contact.html)", widget: "string", default: "contact.html" }
+              - name: "ctaStyle"
+                label: "Button Style"
+                widget: "select"
+                default: "outline"
+                options:
+                  - { label: "Outline (default)", value: "outline" }
+                  - { label: "Orange / Primary", value: "primary" }
+                  - { label: "Dark / Black", value: "dark" }
+
+  # ── SITE SETTINGS ─────────────────────────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "site_settings"
+        label: "Announcement Bar"
+        file: "data/settings.json"
+        fields:
+          - { name: "announcementText", label: "Announcement Text", widget: "string", hint: "e.g. 🔥 Spring Presale — Up to 10% off select bikes." }
+          - { name: "announcementLink", label: "Link (e.g. shop.html)", widget: "string" }
+          - { name: "announcementLinkText", label: "Link Text (e.g. Shop Now →)", widget: "string" }

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jer's Bike Shop — Quality Bikes & Service</title>
+  <meta name="description" content="Jer's Bike Shop — your local destination for quality bikes, expert service, and cycling community events." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  🔥 Spring Presale — Up to 10% off select bikes. Limited units. <a href="shop.html">Shop Now →</a>
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact Us</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span> Now accepting presale orders
+      </div>
+      <h1>Ride More.<br><em>Worry Less.</em></h1>
+      <p>Jer's Bike Shop brings you quality bikes, expert repairs, and a community that lives for the ride. Find your perfect bike — or let us tune the one you have.</p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-primary">Shop Bikes</a>
+        <a href="services.html" class="btn btn-outline">View Services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Happy Riders</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">12 yrs</div>
+          <div class="hero-stat-label">In Business</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">48hr</div>
+          <div class="hero-stat-label">Avg. Turnaround</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg width="280" height="280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8">
+        <circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/>
+        <path d="M5.5 17.5L9 10l3 2 3-5 1 4 2.5 6.5"/><path d="M9 10h4"/>
+      </svg>
+      <div class="presale-tag">PRESALE LIVE</div>
+      <div class="hero-visual-badge">
+        <div class="icon">🚲</div>
+        <div>
+          <strong>Spring Collection 2026</strong>
+          <span>New arrivals dropping soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section" style="background: var(--white);">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Featured Bikes</div>
+      <h2 class="section-title">Presale & In-Stock Picks</h2>
+      <p class="section-sub">Reserve yours before they sell out. Presale orders ship within 2 weeks of arrival.</p>
+    </div>
+    <div class="products-grid" id="featured-products"></div>
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="shop.html" class="btn btn-outline">View All Bikes →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Services Teaser -->
+<section class="section" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">Expert Service</div>
+      <h2 class="section-title">We Keep You Rolling</h2>
+      <p class="section-sub">From quick tune-ups to full custom builds — our certified mechanics have you covered.</p>
+    </div>
+    <div class="services-grid" id="services-teaser"></div>
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="services.html" class="btn btn-dark">See All Services & Pricing →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Events</div>
+      <h2 class="section-title">Rides, Workshops & Sales</h2>
+      <p class="section-sub">Join the community. Whether you're a beginner or a seasoned rider, there's always something happening at the shop.</p>
+    </div>
+    <div class="events-grid" id="homepage-events"></div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" style="background: var(--gray-50);">
+  <div class="container">
+    <div class="section-header center">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">What Riders Are Saying</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Jer's got me set up with the perfect trail bike for my budget. Jer himself spent 45 minutes with me just figuring out what I needed. That kind of service is rare."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Marcus R.</div>
+            <div class="author-since">Customer since 2022</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Brought in my commuter bike that hadn't been touched in years. They had it running like new within 24 hours and the price was totally fair. My go-to shop."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">ST</div>
+          <div>
+            <div class="author-name">Sarah T.</div>
+            <div class="author-since">Customer since 2023</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The Saturday group rides are the highlight of my week. Great people, great routes, and the shop is always there with support. Can't recommend enough."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">DL</div>
+          <div>
+            <div class="author-name">David L.</div>
+            <div class="author-since">Customer since 2021</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="section newsletter" id="newsletter">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div>
+        <div class="section-label" style="color: var(--accent);">Stay in the Loop</div>
+        <h2>Be First for Presales & Events</h2>
+        <p>Get early access to sales, presale drops, workshop spots, and group ride announcements. No spam — ever.</p>
+      </div>
+      <div>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="your@email.com" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="newsletter-note">Join 400+ subscribers. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">Jer's <span>Bike</span> Shop</a>
+        <p>Your local bike shop for quality rides, expert service, and a community that loves cycling as much as you do.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Instagram">📷</a>
+          <a href="#" class="social-link" title="Facebook">👥</a>
+          <a href="#" class="social-link" title="YouTube">▶️</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Bikes</a></li>
+          <li><a href="shop.html">Presale</a></li>
+          <li><a href="shop.html">Mountain Bikes</a></li>
+          <li><a href="shop.html">Road Bikes</a></li>
+          <li><a href="shop.html">E-Bikes</a></li>
+          <li><a href="shop.html">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Tune-Ups</a></li>
+          <li><a href="services.html">Repairs</a></li>
+          <li><a href="services.html">Custom Builds</a></li>
+          <li><a href="services.html">Bike Fitting</a></li>
+          <li><a href="services.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Hours & Location</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jer's Bike Shop. All rights reserved.</span>
+      <span>Built with ❤️ for riders</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <span class="toast-icon">✅</span>
+  <span id="toast-msg"></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "name": "Trail Blazer 29 — Hardtail MTB",
+      "category": "mountain",
+      "badge": "presale",
+      "price": 1199,
+      "originalPrice": 1499,
+      "icon": "🚵",
+      "featured": true,
+      "ctaText": "Reserve Now"
+    },
+    {
+      "name": "Aero Elite 700c — Carbon Road Bike",
+      "category": "road",
+      "badge": "new",
+      "price": 2499,
+      "originalPrice": null,
+      "icon": "🚴",
+      "featured": true,
+      "ctaText": "Inquire"
+    },
+    {
+      "name": "City Cruiser 7-Speed — Step-Through",
+      "category": "city",
+      "badge": "sale",
+      "price": 649,
+      "originalPrice": 849,
+      "icon": "🚲",
+      "featured": true,
+      "ctaText": "Buy Now"
+    },
+    {
+      "name": "Volt Urban E-Bike — 500W Motor",
+      "category": "electric",
+      "badge": "presale",
+      "price": 2199,
+      "originalPrice": 2699,
+      "icon": "⚡",
+      "featured": true,
+      "ctaText": "Reserve Now"
+    },
+    {
+      "name": "Gravel King 650b — Adventure Bike",
+      "category": "mountain",
+      "badge": "sale",
+      "price": 899,
+      "originalPrice": 1099,
+      "icon": "🏔️",
+      "featured": false,
+      "ctaText": "Buy Now"
+    },
+    {
+      "name": "Endurance Pro — Alloy Endurance Road",
+      "category": "road",
+      "badge": "presale",
+      "price": 1599,
+      "originalPrice": 1899,
+      "icon": "🏅",
+      "featured": false,
+      "ctaText": "Reserve Now"
+    },
+    {
+      "name": "Little Ripper 20\" — Ages 6–9",
+      "category": "kids",
+      "badge": "new",
+      "price": 299,
+      "originalPrice": null,
+      "icon": "🎠",
+      "featured": false,
+      "ctaText": "Inquire"
+    },
+    {
+      "name": "Cargo Runner E-Bike — Long-Tail",
+      "category": "electric",
+      "badge": "new",
+      "price": 3499,
+      "originalPrice": null,
+      "icon": "🔋",
+      "featured": false,
+      "ctaText": "Inquire"
+    }
+  ]
+}
